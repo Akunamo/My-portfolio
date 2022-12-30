@@ -1,0 +1,1 @@
+.skill-grid{display:grid;grid-template-columns:repeat(4, 1fr);gap:2rem}.skill-grid .skill{display:grid;place-items:center;font-size:.9rem}.skill-grid .skill p:not(.angular){margin-top:1rem}.skill-grid .skill .angular{margin-top:.55rem}

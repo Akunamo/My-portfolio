@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.main {
+  margin-block: 8rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  max-width: 15ch;
+  line-height: .8;
+}
+
+.sub-title {
+  display: inline-block;
+  color: #e6e6e6;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,22 @@
+header {
+    background-color: black;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+
+
+    .nav-list {
+        display: flex;
+        margin-left: auto;
+        margin-block: 2rem;
+
+        .nav-list-item {
+            list-style: none;
+            margin-left: 2em;
+            font-family: monospace, sans-serif;
+        }
+    }
+}

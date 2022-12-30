@@ -1,0 +1,38 @@
+.project {
+  display: flex;
+}
+
+.project .project-info {
+  width: 70%;
+}
+
+.project .project-info li {
+  line-height: 1.6;
+}
+
+.project .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project .tags li {
+  list-style: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: .8rem;
+  background-color: var(--clr-primary-light);
+  border-radius: .3em;
+  padding: .5em .7em;
+}
+
+.project .project-image {
+  max-width: 45%;
+  transform: translateX(45deg);
+}
+
+.project .project-image img {
+  border-radius: .3rem;
+  box-shadow: inset 0 0 0 3px var(--clr-primary-light), 0 0 0 3px var(--clr-primary-light);
+  height: auto;
+  object-fit: cover;
+}

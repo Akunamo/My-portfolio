@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --clr-primary: #8b39ef;
+  --clr-primary-light: #694497;
+}
+
+*,
+*::after*::before {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+label,
+input,
+textarea {
+  font: inherit;
+}
+
+.container {
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.txt-primary {
+  color: var(--clr-primary);
+}
+
+.sub-heading {
+  letter-spacing: 2px;
+  font-family: monospace;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.flow > *:not(:last-child) {
+  margin-bottom: 1.3rem;
+}
+
+.flow-2 > *:not(:last-child, h2) {
+  margin-bottom: 7rem;
+}
+
+.mb-2 {
+  margin-bottom: 14rem;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-bottom: 10rem;
+}
+
+.wave-bg {
+  position: relative;
+  padding-block: 10rem;
+  isolation: isolate;
+}
+
+.wave-bg::before,
+.wave-bg::after {
+  content: '';
+  position: absolute;
+  background-size: 100% 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  inset: 0 0 0;
+}
+
+.wave-bg::before {
+  background-image: url("../src/assets/wave-down.svg");
+}
+
+.wave-bg::after {
+  background-image: url("../src/assets/wave-combo.svg");
+}
+
+section h2 {
+  letter-spacing: 2px;
+  font-family: monospace;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}

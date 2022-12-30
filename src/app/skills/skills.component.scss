@@ -1,0 +1,20 @@
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    .skill {
+        display: grid;
+        place-items: center;
+        font-size: .9rem;
+
+        p:not(.angular) {
+            margin-top: 1rem;
+        }
+
+        .angular {
+            margin-top: .55rem;
+        }
+
+    }
+}
