@@ -1,11 +1,13 @@
-<section>
+<section id="contacts" class="wave-bg">
     <div class="container">
         <h2>Contacts</h2>
-        <form action="https://formsubmit.co/your@email.com" method="POST">
+        <form class="flow" action="https://formsubmit.co/your@email.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
             <label for="name">Name</label>
             <input id="name" type="text" name="name" required>
             <label for="email">Email</label>
             <input id="email" type="email" name="email" required>
+            <textarea name="message" placeholder="All feedback is welcome" rows="14"></textarea>
             <button type="submit">Send</button>
            </form>
     </div>
