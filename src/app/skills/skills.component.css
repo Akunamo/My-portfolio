@@ -1,3 +1,7 @@
+.skills {
+  background-color: #7513ec;
+}
+
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
