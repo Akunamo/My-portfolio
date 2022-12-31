@@ -1,5 +1,6 @@
 .project {
   display: flex;
+  perspective: 45rem;
 }
 
 .project .project-info {
@@ -27,7 +28,9 @@
 
 .project .project-image {
   max-width: 45%;
-  transform: translateX(45deg);
+  transform-style: preserve-3d;
+  transform-origin: right;
+  transform: rotateY(-35deg);
 }
 
 .project .project-image img {

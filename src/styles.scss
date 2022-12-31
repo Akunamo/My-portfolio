@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 h1,
 h2,
@@ -61,15 +65,17 @@ textarea {
 }
 
 .flow>*:not(:last-child) {
-    margin-bottom: 1.3rem;
+    margin-bottom: 2rem;
 }
 
 .flow-2>*:not(:last-child, h2) {
-    margin-bottom: 7rem;
+    margin-bottom: 12rem;
 }
 
-.mb-2 {
-    margin-bottom: 14rem;
+.mb {margin-bottom: 10rem;}
+
+section {
+    padding-block: 8rem;
 }
 
 // -------------------------
@@ -79,10 +85,10 @@ textarea {
 body {
     background-color: black;
     color: white;
-    font-family: sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1rem;
     // Temporary
-    padding-bottom: 10rem;
+    // padding-bottom: 10rem;
 }
 
 // --------------------------------------------------------------------------------
@@ -93,7 +99,6 @@ body {
 
 .wave-bg {
     position: relative;
-    padding-block: 10rem;
     isolation: isolate;
 }
 
@@ -103,11 +108,10 @@ body {
     content: '';
     position: absolute;
     // background-color: red;
-    background-size: 100% 100px;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
-    inset: 0 0 0;
+    inset: 0;
 }
 
 .wave-bg::before {
@@ -115,13 +119,12 @@ body {
     // was that there were no quotes "" or ''
     // background-image: url('../src/assets/expense-chart.png');
     background-image: url('../src/assets/wave-down.svg');
+    background-position: top;
 }
 
 .wave-bg::after {
-    // i thought it was not working because of svg but the problems 
-    // was that there were no quotes "" or ''
-    // background-image: url('../src/assets/expense-chart.png');
-    background-image: url('../src/assets/wave-combo.svg');
+    background-image: url('../src/assets/wave-combo-light.svg');
+    background-position: bottom;
 }
 
 
