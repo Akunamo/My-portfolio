@@ -1,1 +1,1 @@
-header{background-color:black;color:white}.navbar{display:flex;align-items:center}.navbar .nav-list{display:flex;margin-left:auto;margin-block:2rem}.navbar .nav-list .nav-list-item{list-style:none;margin-left:2em;font-family:monospace, sans-serif}
+header{position:fixed;left:0;right:0;z-index:999;background-color:rgba(0,0,0,0.811);backdrop-filter:blur(4px);color:white}.navbar{display:flex;align-items:center}.navbar .nav-list{display:flex;margin-left:auto;margin-block:1.5rem}.navbar .nav-list .nav-list-item{list-style:none;margin-left:2em;font-family:monospace, sans-serif}

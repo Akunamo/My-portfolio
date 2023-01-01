@@ -1,6 +1,5 @@
 .project {
   display: flex;
-  perspective: 45rem;
 }
 
 .project .project-info {
@@ -26,37 +25,19 @@
   padding: .5em .7em;
 }
 
-.project .project-image:hover,
-.project .project-image:focus-visible {
-  box-shadow: 0 0 20px #8b39ef;
-}
-
 .project .project-image {
+  perspective: 55rem;
   max-width: 45%;
-  transform-style: preserve-3d;
-  transform-origin: right;
-  transform: rotateY(-35deg);
 }
 
 .project .project-image img {
+  transform-style: preserve-3d;
+  transform: rotateY(-35deg);
   border-radius: .3rem;
-  box-shadow: inset 0 0 0 3px var(--clr-primary-light), 0 0 0 3px var(--clr-primary-light);
   height: auto;
   object-fit: cover;
 }
 
-.project::after {
-  content: '';
-  position: absolute;
-  display: block;
-  left: 75%;
-  bottom: -50%;
-  height: 3%;
-  width: 5.5%;
-  z-index: -10;
-  transform-style: preserve-3d;
-  transform: rotateX(80deg);
-  border-radius: 50%;
-  box-shadow: 0 0 120px 120px #8b39ef;
-  background-color: #8b39ef;
+.project .project-image img:hover, .project .project-image img:focus-visible {
+  box-shadow: 0 0 40px #740bf4;
 }
