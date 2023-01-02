@@ -48,10 +48,12 @@ textarea {
 // -------------------------------
 
 .container {
+    width: 95%;
     max-width: 60rem;
     margin-inline: auto;
 }
 
+.flex {display: flex;}
 
 .txt-primary {
     color: var(--clr-primary);
@@ -65,17 +67,38 @@ textarea {
 }
 
 .flow>*:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
 }
 
 .flow-2>*:not(:last-child, h2) {
-    margin-bottom: 12rem;
+    margin-bottom: 10rem;
 }
 
-.mb {margin-bottom: 10rem;}
+.mb {margin-bottom: 3rem;}
 
 section {
     padding-block: 8rem;
+}
+
+@media (min-width:35rem) {
+    
+    .sub-heading {
+        margin-bottom: 3rem;
+    }
+    
+    .flow>*:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    
+    .flow-2>*:not(:last-child, h2) {
+        margin-bottom: 12rem;
+    }
+    
+    .mb {margin-bottom: 3rem;}
+    
+    section {
+        padding-block: 8rem;
+    }
 }
 
 // -------------------------

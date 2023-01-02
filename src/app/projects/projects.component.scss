@@ -25,12 +25,9 @@
     }
 
     .project-image {
-        perspective: 55rem;
         max-width: 45%;
 
         img {
-            transform-style: preserve-3d;
-            transform: rotateY(-35deg);
             border-radius: .3rem;
             height: auto;
             object-fit: cover;
@@ -38,7 +35,7 @@
 
             &:hover,
             &:focus-visible {
-                box-shadow: 0 0 40px hsl(267, 91%, 50%);
+                box-shadow: 0 0 40px hsl(267, 91%, 78%);
             }
         }
     }
