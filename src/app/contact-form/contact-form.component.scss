@@ -16,5 +16,13 @@ button {
     font-size: 1.3rem;
     padding: .7em 1.6em;
     border-radius: .4em;
-    background-color: var(--clr-primary-light);
+    border: transparent;
+    background-color: var(--clr-primary);
+    box-shadow: .2rem .2rem .7rem hsla(0, 0%, 0%, 0.5);
+    transition: scale 300ms ease;
+
+    &:hover,
+    &:focus-visible {
+        scale: 1.1;
+    }
 }

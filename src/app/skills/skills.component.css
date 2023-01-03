@@ -1,5 +1,5 @@
 .skills {
-  background-color: #7513ec;
+  background-color: var(--clr-neutral-dark);
 }
 
 .skill-grid {
