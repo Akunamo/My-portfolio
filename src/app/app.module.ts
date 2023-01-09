@@ -8,6 +8,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { ResumeModalComponent } from './resume-modal/resume-modal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
     ProjectsComponent,
     SkillsComponent,
     ContactFormComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
+    ResumeModalComponent,
   ],
   imports: [
     BrowserModule,

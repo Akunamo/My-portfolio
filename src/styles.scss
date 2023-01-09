@@ -1,17 +1,40 @@
-
 :root {
-
     // Neutrals
-    
-    --clr-neutral-dark:hsl(0, 0%, 0%);
-    --clr-neutral-light:hsl(81, 33%, 81%);
-    
-    --clr-primary: hsl(267, 85%, 58%);
-    --clr-secondary: hsl(283, 34%, 28%);
-    --clr-purple-dark: hsla(267, 85%, 58%, 0.4);
 
-    --clr-gray:hsl(0, 0%, 50%);
+    --clr-primary: hsl(0, 0%, 0%);
+    --clr-secondary: hsl(0, 0%, 43%);
+    --clr-accent: hsl(267, 85%, 58%);
+
+    /* font-sizes */
+    --fs-700: calc(clamp(3rem, 8vw + 1rem, 5rem));
+    --fs-600: 2.6rem;
+    --fs-500: 1.5rem;
+    /* --fs-500: clamp(1rem, 4vw + .5rem, 1.75rem); */
+    --fs-400: 1rem;
+    --fs-300: .8rem;
 }
+
+
+// @media (min-width: 35em) {
+//     :root {
+//         --fs-800: 5rem;
+//         --fs-700: 2.5rem;
+//         --fs-600: 1.5rem;
+//         --fs-500: 1.25rem;
+//         --fs-400: 1rem;
+//     }
+// }
+
+// @media (min-width: 45em) {
+//     :root {
+//         /* font-sizes */
+//         --fs-800: 6.25rem;
+//         --fs-700: 3.5rem;
+//         --fs-600: 2rem;
+//         --fs-500: 1.75rem;
+//         --fs-400: 1.125rem;
+//     }
+// }
 
 *,
 *::after*::before {
@@ -45,9 +68,10 @@ a {
     text-decoration: none;
 }
 
-li {
-    list-style: none;
+ul {
+    padding: 0;
 }
+
 
 label,
 input,
@@ -65,59 +89,67 @@ textarea {
     margin-inline: auto;
 }
 
+.txt-primary {color: var(--clr-primary);}
+.txt-secondary {color: var(--clr-secondary);}
+.txt-accent {color: var(--clr-accent);}
+.txt-white {color: white;}
 
-.txt-black {color: black;}
-.txt-accent {color: var(--clr-primary);}
-.txt-gray {color: var(--clr-gray);}
+.bg-main {background-color: var(--clr-primary);}
+.bg-secondary {background-color: var(--clr-secondary);}
 
-.bg-dark {
-    background-color: var(--clr-neutral-dark);
-    color: var(--clr-gray);
-}
+.letter-spacing-1 {letter-spacing: 4.75px;}
+.letter-spacing-2 {letter-spacing: 2.7px;}
+.letter-spacing-3 {letter-spacing: 2.35px;}
 
-.bg-light {
-    background-color: var(--clr-neutral-light);
-    color: var(--clr-neutral-dark);
-}
+.uppercase {text-transform: uppercase;}
 
+.fs-900 {font-size: var(--fs-900);}
+.fs-800 {font-size: var(--fs-800);}
+.fs-700 {font-size: var(--fs-700);}
+.fs-600 {font-size: var(--fs-600);}
+.fs-500 {font-size: var(--fs-500);}
+.fs-400 {font-size: var(--fs-400);}
+.fs-300 {font-size: var(--fs-300);}
+.fs-200 {font-size: var(--fs-200);}
 
-.sub-heading {
-    letter-spacing: 2px;
-    font-family: monospace;
-    font-size: 2rem;
-    margin-bottom: 3rem;
-}
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {line-height: 1.1;}
+
 
 .flow>*:not(:last-child) {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5em;
 }
 
 .flow-2>*:not(:last-child, h2) {
     margin-bottom: 10rem;
 }
 
-.mb {margin-bottom: 3rem;}
+.mb {
+    margin-bottom: 3rem;
+}
 
 section {
     padding-block: 8rem;
 }
 
 @media (min-width:35rem) {
-    
+
+    .container{max-width: 80%;}
+
     .sub-heading {
         margin-bottom: 3rem;
     }
-    
-    .flow>*:not(:last-child) {
-        margin-bottom: 2rem;
-    }
-    
+
     .flow-2>*:not(:last-child, h2) {
         margin-bottom: 12rem;
     }
-    
-    .mb {margin-bottom: 3rem;}
-    
+
+    .mb {
+        margin-bottom: 3rem;
+    }
+
     section {
         padding-block: 8rem;
     }
@@ -129,9 +161,15 @@ section {
 
 body {
     background-color: var(--clr-neutral-light);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     // Temporary
     // padding-bottom: 10rem;
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    padding-block: 2rem;
 }
 
 // --------------------------------------------------------------------------------
@@ -143,6 +181,7 @@ body {
 section h2 {
     letter-spacing: 2px;
     font-family: monospace;
-    font-size: 2rem;
+    text-align: center;
+    font-size: var(--fs-600);
     margin-bottom: 3rem;
 }

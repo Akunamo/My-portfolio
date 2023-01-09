@@ -4,13 +4,17 @@
 
 .skill-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 
     .skill {
         display: grid;
         place-items: center;
-        font-size: .9rem;
+        font-size: .6rem;
+
+        img {
+            object-fit: cover;
+        }
 
         p:not(.angular) {
             margin-top: 1rem;
@@ -19,6 +23,11 @@
         .angular {
             margin-top: .55rem;
         }
+    }
+}
 
+@media  (min-width:45rem) {
+    .skill-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

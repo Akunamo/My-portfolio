@@ -2,6 +2,8 @@ header {
   position: relative;
   height: calc(min(100vh, 45rem));
   display: grid;
+  place-items: center;
+  text-align: center;
 }
 
 header::before {
@@ -18,28 +20,50 @@ header::before {
   filter: drop-shadow(0 0 1.5rem #1a1a1a);
 }
 
-header .hero {
-  margin-block: 16rem 14rem;
+.hero {
+  padding-block: 4rem;
 }
 
-header .hero .title {
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-  max-width: 15ch;
-  line-height: .8;
+.hero .title,
+.hero .summary {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  margin-inline: auto;
 }
 
-header .hero .title .small {
-  display: inline-block;
-  font-size: 1.6rem;
+.hero .title {
   letter-spacing: 2px;
+  max-width: 20em;
+  line-height: .5;
 }
 
-header .hero .link-list {
+.hero .title .small {
+  display: inline-block;
+}
+
+.hero .summary {
+  max-width: 42ch;
+}
+
+.link-list {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
 }
 
-header .hero p {
-  max-width: 50%;
+@media (min-width: 45rem) {
+  .hero {
+    text-align: left;
+    padding-left: 3rem;
+  }
+  .hero .title,
+  .hero .summary {
+    margin-inline: 0;
+  }
+  .hero .summary {
+    max-width: 17rem;
+  }
+  .hero .link-list {
+    justify-content: flex-start;
+  }
 }
