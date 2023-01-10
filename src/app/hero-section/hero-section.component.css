@@ -17,7 +17,8 @@ header::before {
   background-size: 100%;
   background-repeat: no-repeat;
   z-index: -1;
-  filter: drop-shadow(0 0 1.5rem #1a1a1a);
+  filter: drop-shadow(0 0 1.5rem var(--clr-accent));
+  opacity: .5;
 }
 
 .hero {
@@ -32,7 +33,6 @@ header::before {
 }
 
 .hero .title {
-  letter-spacing: 2px;
   max-width: 20em;
   line-height: .5;
 }

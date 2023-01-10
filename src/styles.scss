@@ -2,39 +2,35 @@
     // Neutrals
 
     --clr-primary: hsl(0, 0%, 0%);
-    --clr-secondary: hsl(0, 0%, 43%);
-    --clr-accent: hsl(267, 85%, 58%);
+    --clr-secondary: hsl(281, 83%, 37%);
+    --clr-accent: hsl(281, 72%, 46%);
+    --clr-accent-dark: rgba(148, 33, 202, 0.555);
+    --clr-gray: hsl(0, 0%, 53%);
+    --clr-neutral-light: hsl(0, 0%, 83%);
+    --clr-white: hsl(0, 0%, 90%); 
+    --gradient:linear-gradient(to right,hsl(281, 83%, 37%),cyan);
 
     /* font-sizes */
     --fs-700: calc(clamp(3rem, 8vw + 1rem, 5rem));
     --fs-600: 2.6rem;
-    --fs-500: 1.5rem;
+    --fs-500: 1.8rem;
     /* --fs-500: clamp(1rem, 4vw + .5rem, 1.75rem); */
     --fs-400: 1rem;
     --fs-300: .8rem;
 }
 
+// --clr-primary: hsl(0, 0%, 0%);
+// --clr-secondary: hsl(180, 100%, 50%);
+// --clr-accent: hsl(281, 83%, 37%);
+// --clr-gray: hsl(0, 0%, 43%);
+// --clr-white: hsl(0, 0%, 100%); 
 
-// @media (min-width: 35em) {
-//     :root {
-//         --fs-800: 5rem;
-//         --fs-700: 2.5rem;
-//         --fs-600: 1.5rem;
-//         --fs-500: 1.25rem;
-//         --fs-400: 1rem;
-//     }
-// }
+//     --clr-primary: hsl(0, 0%, 0%);
+//     --clr-secondary: hsl(0, 0%, 43%);
+//     --clr-accent: #d30733;
+//     --clr-blue: cyan;
+//     --clr-white: hsl(39, 100%, 50%);
 
-// @media (min-width: 45em) {
-//     :root {
-//         /* font-sizes */
-//         --fs-800: 6.25rem;
-//         --fs-700: 3.5rem;
-//         --fs-600: 2rem;
-//         --fs-500: 1.75rem;
-//         --fs-400: 1.125rem;
-//     }
-// }
 
 *,
 *::after*::before {
@@ -84,18 +80,19 @@ textarea {
 // -------------------------------
 
 .container {
-    width: 95%;
+    width: 93%;
     max-width: 60rem;
     margin-inline: auto;
 }
 
 .txt-primary {color: var(--clr-primary);}
-.txt-secondary {color: var(--clr-secondary);}
+.txt-secondary {color: var(--clr-gray);}
 .txt-accent {color: var(--clr-accent);}
 .txt-white {color: white;}
 
 .bg-main {background-color: var(--clr-primary);}
-.bg-secondary {background-color: var(--clr-secondary);}
+.bg-secondary {background-color: var(--clr-gray);}
+.bg-white {background-color: var(--clr-white);}
 
 .letter-spacing-1 {letter-spacing: 4.75px;}
 .letter-spacing-2 {letter-spacing: 2.7px;}
@@ -117,43 +114,18 @@ textarea {
 .fs-700,
 .fs-600 {line-height: 1.1;}
 
-
-.flow>*:not(:last-child) {
-    margin-bottom: 1.5em;
-}
-
-.flow-2>*:not(:last-child, h2) {
-    margin-bottom: 10rem;
-}
-
-.mb {
-    margin-bottom: 3rem;
-}
-
 section {
     padding-block: 8rem;
 }
 
 @media (min-width:35rem) {
-
-    .container{max-width: 80%;}
-
-    .sub-heading {
-        margin-bottom: 3rem;
-    }
-
-    .flow-2>*:not(:last-child, h2) {
-        margin-bottom: 12rem;
-    }
-
-    .mb {
-        margin-bottom: 3rem;
-    }
+    .container{width: calc(min(60rem,70%));}
 
     section {
-        padding-block: 8rem;
+        padding-top: 14rem;
     }
 }
+
 
 // -------------------------
 // --- Main Styles----------
@@ -183,5 +155,5 @@ section h2 {
     font-family: monospace;
     text-align: center;
     font-size: var(--fs-600);
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }

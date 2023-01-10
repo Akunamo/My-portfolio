@@ -1,11 +1,16 @@
 :root {
   --clr-primary: black;
-  --clr-secondary: #6e6e6e;
-  --clr-accent: #8b39ef;
+  --clr-secondary: #7b10ad;
+  --clr-accent: #9421ca;
+  --clr-accent-dark: rgba(148, 33, 202, 0.555);
+  --clr-gray: #878787;
+  --clr-neutral-light: #d4d4d4;
+  --clr-white: #e6e6e6;
+  --gradient: linear-gradient(to right, #7b10ad, cyan);
   /* font-sizes */
   --fs-700: calc(clamp(3rem, 8vw + 1rem, 5rem));
   --fs-600: 2.6rem;
-  --fs-500: 1.5rem;
+  --fs-500: 1.8rem;
   /* --fs-500: clamp(1rem, 4vw + .5rem, 1.75rem); */
   --fs-400: 1rem;
   --fs-300: .8rem;
@@ -54,7 +59,7 @@ textarea {
 }
 
 .container {
-  width: 95%;
+  width: 93%;
   max-width: 60rem;
   margin-inline: auto;
 }
@@ -64,7 +69,7 @@ textarea {
 }
 
 .txt-secondary {
-  color: var(--clr-secondary);
+  color: var(--clr-gray);
 }
 
 .txt-accent {
@@ -80,7 +85,11 @@ textarea {
 }
 
 .bg-secondary {
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-gray);
+}
+
+.bg-white {
+  background-color: var(--clr-white);
 }
 
 .letter-spacing-1 {
@@ -138,37 +147,16 @@ textarea {
   line-height: 1.1;
 }
 
-.flow > *:not(:last-child) {
-  margin-bottom: 1.5em;
-}
-
-.flow-2 > *:not(:last-child, h2) {
-  margin-bottom: 10rem;
-}
-
-.mb {
-  margin-bottom: 3rem;
-}
-
 section {
   padding-block: 8rem;
 }
 
 @media (min-width: 35rem) {
   .container {
-    max-width: 80%;
-  }
-  .sub-heading {
-    margin-bottom: 3rem;
-  }
-  .flow-2 > *:not(:last-child, h2) {
-    margin-bottom: 12rem;
-  }
-  .mb {
-    margin-bottom: 3rem;
+    width: calc(min(60rem,70%));
   }
   section {
-    padding-block: 8rem;
+    padding-top: 14rem;
   }
 }
 
@@ -188,5 +176,5 @@ section h2 {
   font-family: monospace;
   text-align: center;
   font-size: var(--fs-600);
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
