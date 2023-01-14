@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  public isExpanded = false;
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+  onClick(event:any){
+    this.isExpanded = !this.isExpanded;
   }
 
 }

@@ -4,8 +4,6 @@ nav {
   left: 0;
   right: 0;
   z-index: 999;
-  backdrop-filter: blur(15px) invert(65%);
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 nav > div {
@@ -13,25 +11,21 @@ nav > div {
   flex-direction: row;
 }
 
-nav::before {
-  content: '';
+[aria-controls="navbar"] {
   position: absolute;
-  inset: 0;
-  background-color: var(--clr-neutral-dark);
-  z-index: -1;
-}
-
-nav [aria-controls="navbar"] {
-  position: absolute;
-  right: 1rem;
-  top: clamp(1rem, 5vw, 1.5rem);
-  width: 1rem;
+  right: 2rem;
   aspect-ratio: 1;
+  padding: 0;
+  top: clamp(1rem, 5vw, 1.5rem);
   opacity: 0;
+  background-color: transparent;
+  border: 2px solid var(--clr-accent);
+  box-shadow: inset 0 0 10px var(--clr-accent-dark);
   pointer-events: none;
+  overflow: hidden;
 }
 
-nav .logo {
+.logo {
   margin-block: clamp(1rem, 5vw, 1.5rem);
 }
 
@@ -45,17 +39,28 @@ nav .logo {
 .nav-list .nav-list-item a {
   margin-left: 2em;
   padding: .4em 1em;
-  color: var(--clr-white);
-  border: 2px solid var(--clr-accent);
+  color: var(--clr-secondary);
+  border: 2px solid var(--clr-secondary);
   border-radius: 10rem;
   font-family: monospace, sans-serif;
-  box-shadow: inset 0 0px 10px var(--clr-accent-dark);
 }
 
 @media (max-width: 45rem) {
   [aria-controls="navbar"] {
     z-index: 999;
     opacity: 1;
+    pointer-events: all;
+  }
+  [aria-controls="navbar"] .line {
+    transition: 800ms;
+    stroke-dasharray: 60 39 60 300;
+    transform-origin: center;
+  }
+  [aria-expanded="true"][aria-controls="navbar"] .line {
+    rotate: 45deg;
+    translate: 0 -5%;
+    stroke-dasharray: 60 120 60 300;
+    stroke-dashoffset: -100;
   }
   .nav-list {
     display: block;
@@ -65,8 +70,14 @@ nav .logo {
     margin: 0;
     padding: clamp(4rem, 15vh, 10rem) 2rem;
     height: calc(100vh - 2*clamp(4rem, 15vh, 10rem));
+    background-color: rgba(19, 13, 13, 0.26);
+    backdrop-filter: blur(20px);
+    transition: translate 300ms ease;
   }
   .nav-list .nav-list-item {
     margin-block: 3rem;
+  }
+  .nav-list[aria-expanded="true"] {
+    translate: 0%;
   }
 }

@@ -16,7 +16,7 @@ header {
         background-size: 100%;
         background-repeat: no-repeat;
         z-index: -1;
-        filter: drop-shadow(0 0 1.5rem var(--clr-accent));
+        filter: drop-shadow(0 0 1.5rem var(--clr-secondary));
         opacity: .5;
     }
 }
@@ -33,14 +33,6 @@ header {
 
     .title {
         max-width: 20em;
-        line-height: .5;
-
-        // :first-child {
-        //     // text-shadow: 3px 3px 2px hsla(318, 100%, 50%, 0.493);
-        //     // background-image: var(--gradient);
-        //     // -webkit-background-clip: text;
-        //     // -webkit-text-fill-color: transparent;
-        // }
 
         .small {
             display: inline-block;

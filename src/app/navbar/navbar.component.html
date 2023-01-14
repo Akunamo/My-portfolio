@@ -1,8 +1,18 @@
 <nav class="navbar bg-main txt-white">
     <div class="container">
-        <div class="logo">Hi</div>
-        <button aria-controls="navbar" aria-expanded="false"></button>
-        <ul class="nav-list" aria-expanded="false">
+        <div class="logo">Hi
+
+        </div>
+        <button aria-controls="navbar" [attr.aria-expanded]="isExpanded" (click)="onClick($event)">
+            <svg fill="none" stroke="var(--clr-accent)"  fill="none" class="hambaga"  viewBox="-10 -10 120 120" width="2rem">
+                <path class="line" stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m 18 36 h 60 a 1 1 0 0 1 0 25 h -60 a 1 1 0 0 1 0 -47 h 30 v 80">
+                </path>
+            </svg>
+        </button>
+        <ul class="nav-list" [attr.aria-expanded]="isExpanded">
             <li class="nav-list-item"><a href="#contacts" target="_blank">Contact</a></li>
             <li class="nav-list-item"><a href="#projects" target="_blank">Projects</a></li>
             <!-- <li class="nav-list-item"><a href="#">Resume</a></li> -->
