@@ -50,15 +50,17 @@ nav {
 
     .nav-list-item a {
         margin-left: 2em;
-        padding: .4em 1em;
+        padding: .3em .9em;
         color: var(--clr-secondary);
         border: 2px solid var(--clr-secondary);
         border-radius: 10rem;
-        font-family: monospace, sans-serif;
+        // font-weight: 500;
+        font-family: var(--ff-open-sans);
     }
 }
 
 @media (max-width:45rem) {
+    nav{mask-image:none}
     [aria-controls="navbar"] {
         z-index: 999;
         opacity: 1;
@@ -69,8 +71,6 @@ nav {
             stroke-dasharray: 60 39 60 300;
             transform-origin: center;
         }
-
-
     }
 
     [aria-expanded="true"][aria-controls="navbar"] {

@@ -172,14 +172,6 @@ textarea {
     text-transform: uppercase;
 }
 
-.fs-900 {
-    font-size: var(--fs-900);
-}
-
-.fs-800 {
-    font-size: var(--fs-800);
-}
-
 .fs-700 {
     font-size: var(--fs-700);
 }
@@ -244,9 +236,7 @@ section {
 
 body {
     background-color: var(--clr-neutral-light);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    // Temporary
-    // padding-bottom: 10rem;
+    font-family: var(--ff-open-sans);
 }
 
 footer {

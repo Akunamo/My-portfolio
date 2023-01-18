@@ -27,12 +27,13 @@ header::before {
 
 .hero .title,
 .hero .summary {
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 1rem;
   margin-inline: auto;
 }
 
 .hero .title {
+  line-height: 1;
   max-width: 20em;
 }
 
