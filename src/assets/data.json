@@ -1,0 +1,57 @@
+[
+    {
+        "title": "Expense Chart",
+        "tag": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+        ],
+        "summary": [
+            "See dynamically generated bars based on the data provided in the local JSON file",
+            "Hover over the individual bars to see amount spent",
+            "View the optimal layout for the content depending on their device's screen size."
+        ],
+        "liveLink": "https://akunamo.github.io/Expense-Chart/",
+        "repoLink": "https://github.com/Akunamo/Expense-Chart",
+        "imageSource": "assets/expense-chart.png",
+        "imageWidth": "1000",
+        "imageHeight": "560",
+        "imageAlt": "expense chart webpage"
+    },
+    {
+        "title": "News Homepage",
+        "tag": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+        ],
+        "summary": [
+            "Build a fully responsive layout using grid",
+            "View the relevant drop-down menus on desktop and mobile when interacting with the navigation links"
+        ],
+        "liveLink": "https://akunamo.github.io/New-Homepage/",
+        "repoLink": "https://github.com/Akunamo/New-Homepage",
+        "imageSource": "assets/news-homepage.png",
+        "imageWidth": "1000",
+        "imageHeight": "605",
+        "imageAlt": "news homepage webpage"
+    },
+    {
+        "title": "Project Name",
+        "tag": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+        ],
+        "summary": [
+            "Build a fully responsive layout using grid",
+            "View the relevant drop-down menus on desktop and mobile when interacting with the navigation links"
+        ],
+        "liveLink": "https://akunamo.github.io/New-Homepage/",
+        "repoLink": "https://github.com/Akunamo/New-Homepage",
+        "imageSource": "assets/order summary.png",
+        "imageWidth": "1000",
+        "imageHeight": "567",
+        "imageAlt": "order summary webpage"
+    }
+]
