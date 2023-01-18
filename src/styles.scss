@@ -252,29 +252,40 @@ footer {
 // --------------------------------------------------------------------------------
 
 section h2 {
-    letter-spacing: 2px;
-    font-family: monospace;
     text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    font-weight: 800;
     font-size: var(--fs-600);
+    font-family: var(--ff--lato);
+
+    color: var(--clr-primary-invert);
     margin-bottom: 5rem;
 }
 
 .color-picker fieldset {
     display: flex;
-    flex-direction: column;
+    gap: 1rem;
     position: fixed;
-    left: 0;
-    top: 50%;
-    translate: -10% -50%;
+    top: 0%;
+    left: 50%;
+    translate: -50% -10%;
     border: 0;
     padding: 1rem;
-    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     z-index: 99999;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.308);
+
+    input[type="color"]{
+        border-radius: 50%;
+        width: 1.5rem;
+        border: none;
+    }
 
     input:not(:first-of-type) {
-        margin-top: 1rem;
+        margin-left: .5rem;
     }
 
     input[type="radio"] {

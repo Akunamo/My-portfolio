@@ -4,23 +4,14 @@ nav {
     left: 0;
     right: 0;
     z-index: 999;
-    // mask-image: linear-gradient(black 50%,transparent);
-    // backdrop-filter: blur(15px) invert(65%);
+    // backdrop-filter: blur(15px);
     // box-shadow: 0 0 10px 10px hsla(0, 0%, 0%, .2);
+    mask-image: linear-gradient(black, rgba(0, 0, 0, 0.847));
 
     >div {
         display: flex;
         flex-direction: row;
     }
-
-    // &::before {
-    //     content: '';
-    //     position: absolute;
-    //     inset: 0;
-    //     background-color: var(--clr-neutral-dark);
-    //     // opacity: .9;
-    //     z-index: -1;
-    // }
 }
 
 [aria-controls="navbar"] {
