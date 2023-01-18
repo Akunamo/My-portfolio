@@ -1,15 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,700&display=swap');
+
 :root {
     // Neutrals
 
     --clr-primary: hsl(0, 0%, 0%);
-    --clr-secondary: hsl(281, 83%, 37%);
+    --clr-primary-light:hsla(0, 0%, 0%, .95);
+    
     --clr-accent: hsl(281.75, 68.67%, 48.82%);
-    --clr-accent-dark: rgba(148, 33, 202, 0.555);
-    --clr-shadow: rgba(148, 33, 202, 0.219);
-    --clr-gray: hsl(0, 0%, 53%);
-    --clr-neutral-light: hsl(0, 0%, 83%);
-    --clr-white: hsl(0, 0%, 90%);
-    --gradient: linear-gradient(to right, hsl(281, 28%, 46%), cyan);
+    --clr-accent-light: rgba(148, 33, 202, 0.555);
+
+    --clr-secondary: hsl(175.57, 82.86%, 48.04%);
+    --clr-secondary-dark: rgba(21, 224, 210, 0.507);
+    
+    --clr-gray: hsl(213deg, 5%, 39%);
+    --clr-primary-invert: hsl(0, 0%, 96%);
+
+    --ff-open-sans: 'Open Sans', sans-serif;
+    --ff--lato: 'Lato', sans-serif;
 
     /* font-sizes */
     --fs-700: calc(clamp(3rem, 8vw + 1rem, 5rem));
@@ -21,27 +28,38 @@
     --fs-200: .76rem;
 }
 
+:root:has(#light:checked){
+    --clr-primary: hsl(0, 0%, 100%);
+    --clr-primary-light: hsla(0, 0%, 100%, .95);
+    --clr-primary-invert: hsl(0, 0%, 5%);
+    --clr-gray: hsl(213deg, 5%, 39%);
+}
+
 :root:has(#blue:checked) {
-    --clr-primary: hsl(0, 0%, 0%);
-    --clr-secondary: hsl(175.57, 82.86%, 48.04%);
-    --clr-secondary-dark: rgba(21, 224, 210, 0.507);
     --clr-accent: hsl(281, 72%, 46%);
     --clr-accent-dark: rgba(148, 33, 202, 0.555);
-    --clr-shadow: rgba(148, 33, 202, 0.219);
-    --clr-shadow: rgba(21, 224, 210, 0.11);
-    --clr-neutral-light: hsl(0, 0%, 83%);
+
+    --clr-secondary: hsl(175.57, 82.86%, 48.04%);
+    --clr-secondary-dark: rgba(21, 224, 210, 0.507);
     --gradient: linear-gradient(to right, hsl(281, 28%, 46%), cyan);
 }
 
 :root:has(#red:checked) {
-    --clr-primary: hsl(0, 0%, 0%);
-    --clr-secondary: hsl(39, 100%, 50%);
+    // --clr-accent: hsl(347, 94%, 43%);
+    --clr-accent: hsl(348, 83%, 47%);
+    --clr-accent-dark: hsla(347, 94%, 43%, 0.507);
+    
+    --clr-secondary: hsl(175.57, 82.86%, 48.04%);
     --clr-secondary-dark: rgba(21, 224, 210, 0.507);
-    --clr-accent: hsl(347, 94%, 43%);
-    --clr-accent-dark: rgba(148, 33, 202, 0.555);
-    --clr-shadow: rgba(148, 33, 202, 0.219);
-    --clr-shadow: rgba(21, 224, 210, 0.11);
-    --clr-neutral-light: hsl(0, 0%, 83%);
+    --gradient: linear-gradient(to right, hsl(281, 28%, 46%), cyan);
+}
+
+:root:has(#red-orange:checked) {
+    --clr-accent: rgb(238, 25, 25);
+    --clr-accent-dark: hsla(0, 94%, 43%, 0.507);
+
+    --clr-secondary: rgb(223, 202, 14);
+    --clr-secondary-dark: rgba(21, 224, 210, 0.507);
     --gradient: linear-gradient(to right, hsl(281, 28%, 46%), cyan);
 }
 
@@ -123,21 +141,20 @@ textarea {
     color: var(--clr-accent);
 }
 
-.txt-white {
-    color: white;
+.txt-light {
+    color: var(--clr-primary-invert);
 }
 
 .bg-main {
     background-color: var(--clr-primary);
 }
 
+.bg-main-light {background-color: var(--clr-primary-light);}
+
 .bg-secondary {
-    background-color: var(--clr-gray);
+    background-color: var(--clr-primary-light);
 }
 
-.bg-white {
-    background-color: var(--clr-white);
-}
 
 .letter-spacing-1 {
     letter-spacing: 4.75px;

@@ -1,13 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,700&display=swap");
 :root {
   --clr-primary: black;
-  --clr-secondary: #7b10ad;
+  --clr-primary-light: rgba(0, 0, 0, 0.95);
   --clr-accent: #9e27d2;
-  --clr-accent-dark: rgba(148, 33, 202, 0.555);
-  --clr-shadow: rgba(148, 33, 202, 0.219);
-  --clr-gray: #878787;
-  --clr-neutral-light: #d4d4d4;
-  --clr-white: #e6e6e6;
-  --gradient: linear-gradient(to right, #815496, cyan);
+  --clr-accent-light: rgba(148, 33, 202, 0.555);
+  --clr-secondary: #15e0d1;
+  --clr-secondary-dark: rgba(21, 224, 210, 0.507);
+  --clr-gray: #5e6368;
+  --clr-primary-invert: whitesmoke;
+  --ff-open-sans: 'Open Sans', sans-serif;
+  --ff--lato: 'Lato', sans-serif;
   /* font-sizes */
   --fs-700: calc(clamp(3rem, 8vw + 1rem, 5rem));
   --fs-600: 2.6rem;
@@ -18,27 +20,34 @@
   --fs-200: .76rem;
 }
 
+:root:has(#light:checked) {
+  --clr-primary: white;
+  --clr-primary-light: rgba(255, 255, 255, 0.95);
+  --clr-primary-invert: #0d0d0d;
+  --clr-gray: #5e6368;
+}
+
 :root:has(#blue:checked) {
-  --clr-primary: black;
-  --clr-secondary: #15e0d1;
-  --clr-secondary-dark: rgba(21, 224, 210, 0.507);
   --clr-accent: #9421ca;
   --clr-accent-dark: rgba(148, 33, 202, 0.555);
-  --clr-shadow: rgba(148, 33, 202, 0.219);
-  --clr-shadow: rgba(21, 224, 210, 0.11);
-  --clr-neutral-light: #d4d4d4;
+  --clr-secondary: #15e0d1;
+  --clr-secondary-dark: rgba(21, 224, 210, 0.507);
   --gradient: linear-gradient(to right, #815496, cyan);
 }
 
 :root:has(#red:checked) {
-  --clr-primary: black;
-  --clr-secondary: #ffa600;
+  --clr-accent: #db143c;
+  --clr-accent-dark: rgba(213, 7, 51, 0.507);
+  --clr-secondary: #15e0d1;
   --clr-secondary-dark: rgba(21, 224, 210, 0.507);
-  --clr-accent: #d50733;
-  --clr-accent-dark: rgba(148, 33, 202, 0.555);
-  --clr-shadow: rgba(148, 33, 202, 0.219);
-  --clr-shadow: rgba(21, 224, 210, 0.11);
-  --clr-neutral-light: #d4d4d4;
+  --gradient: linear-gradient(to right, #815496, cyan);
+}
+
+:root:has(#red-orange:checked) {
+  --clr-accent: #ee1919;
+  --clr-accent-dark: rgba(213, 7, 7, 0.507);
+  --clr-secondary: #dfca0e;
+  --clr-secondary-dark: rgba(21, 224, 210, 0.507);
   --gradient: linear-gradient(to right, #815496, cyan);
 }
 
@@ -102,20 +111,20 @@ textarea {
   color: var(--clr-accent);
 }
 
-.txt-white {
-  color: white;
+.txt-light {
+  color: var(--clr-primary-invert);
 }
 
 .bg-main {
   background-color: var(--clr-primary);
 }
 
-.bg-secondary {
-  background-color: var(--clr-gray);
+.bg-main-light {
+  background-color: var(--clr-primary-light);
 }
 
-.bg-white {
-  background-color: var(--clr-white);
+.bg-secondary {
+  background-color: var(--clr-primary-light);
 }
 
 .letter-spacing-1 {

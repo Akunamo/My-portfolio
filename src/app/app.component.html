@@ -1,6 +1,19 @@
 <app-navbar></app-navbar>
 <main>
-    <app-hero-section></app-hero-section>
+    <form class="color-picker" action="">
+        <fieldset>
+            <legend class="visually-hidden">Color Picker</legend>
+            <label class="visually-hidden" for="blue">blue theme</label>
+            <input type="radio" name="theme" id="blue">
+            <label class="visually-hidden" for="red">red theme</label>
+            <input type="radio" name="theme" id="red">
+            <label class="visually-hidden" for="red-orange">blue theme</label>
+            <input type="radio" name="theme" id="red-orange">
+            <label class="visually-hidden" for="light">switch theme</label>
+            <input type="checkbox" id="light" (change)="themeSwitch($event)">
+        </fieldset>
+    </form>
+    <app-hero-section #hero></app-hero-section>
     <app-projects></app-projects>
     <app-skills></app-skills>
     <app-contact-form></app-contact-form>
