@@ -4,6 +4,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 999;
+  mask-image: linear-gradient(black, rgba(0, 0, 0, 0.847));
 }
 
 nav > div {

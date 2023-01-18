@@ -79,55 +79,54 @@
         padding: .8em 1.4em;
         font-size: var(--fs-300);
         border-radius: 5em;
+
+        &.live {
+            letter-spacing: 2px;
+            font-weight: 900;
+            color: var(--clr-accent);
+            border: 2px solid var(--clr-accent);
+        }
+
+        &.git {
+            margin-left: 2rem;
+            color: var(--clr-secondary);
+            background-color: var(--clr-primary);
+            border: 2px solid var(--clr-secondary);
+        }
+
+        &:hover::after,
+        &:focus-visible::after {
+            scale: 1.35;
+        }
     }
-
-    .call-to-action.live {
-        letter-spacing: 2px;
-        backdrop-filter: blur(50px);
-        font-weight: 900;
-        color: var(--clr-accent);
-        border: 2px solid var(--clr-accent);
-    }
-
-    .call-to-action.git {
-        margin-left: 2rem;
-        color: var(--clr-secondary);
-        background-color: var(--clr-primary);
-        border: 2px solid var(--clr-secondary);
-    }
-
-    .call-to-action:hover::after,
-    .call-to-action:focus-visible::after {
-        scale: 1.35;
-    }
-}
-
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    li {
-        font-size: var(--fs-200);
-        list-style: none;
-        padding: .5em .7em;
-        color: var(--clr-secondary);
-        border-radius: .45em;
-        border: 1px solid var(--clr-secondary);
-    }
-
 }
 
 
 .project-image {
-    border-radius: .4rem;
-    // box-shadow: 0 2rem 5rem var(--clr-shadow);
-    // align-self: center;
-    overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        scale: .96;
+        z-index: -1;
+        transform: skew(-10deg) rotate(-4deg);
+        border-radius: 1rem;
+        // background-image: linear-gradient(45deg,var(--clr-accent) 10%,transparent 30% 80%,var(--clr-secondary)90%);
+        background-image: linear-gradient(45deg,var(--clr-accent) 10%,var(--clr-secondary)90%);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 14;
+        border-radius: 1rem;
+        background-color: rgba(0, 0, 0, 0.144);
+    }
 
     img {
-        opacity: .8;
+        border-radius: 1rem;
         object-fit: cover;
         height: 100%;
     }
