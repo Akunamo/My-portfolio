@@ -1,82 +1,26 @@
-<section id="projects">
-    <div class="container">
-        <h2 >Projects</h2>
-        <!-- <div class="projects"> -->
+<section class="container" id="projects">
+    <h2>My Work</h2>
 
-            <div class="project">
-                <div class="project-info">
-                    <h3>Expense Chart</h3>
-                    
-                    <ul class="tags">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                    </ul>
+    <div *ngFor="let project of projectData" class="project">
+        <div class="project-info">
+            <h3>{{project.title}}</h3>
 
-                    <ul class="txt-secondary">
-                        <li>See dynamically generated bars based on the data provided in the local JSON file</li>
-                        <li>Hover over the individual bars to see amount spent</li>
-                        <li>View the optimal layout for the content depending on their device's screen size.</li>
-                    </ul>
+            <ul class="tags">
+                <li *ngFor="let tag of project.tag">{{tag}}</li>
+            </ul>
 
-                    <div>
-                        <a class="call-to-action live" target="_blank" href="https://akunamo.github.io/Expense-Chart/">See live</a>
-                        <a class="call-to-action git" target="_blank" href="https://github.com/Akunamo/Expense-Chart">Source code</a>
-                    </div>
-                </div>
-                <div class="project-image">
-                    <img src="assets/expense-chart.png" alt="expense chart webpage" width="1000" height="560">
-                </div>
+            <ul class="summary txt-secondary">
+                <li *ngFor="let i of project.summary">{{i}}</li>
+            </ul>
+
+            <div class="action-button">
+                <a class="call-to-action live" target="_blank" href="{{project.liveLink}}">See live</a>
+                <a class="call-to-action git" target="_blank" href="{{project.repoLink}}">Source code</a>
             </div>
-            <div class="project">
-                <div class="project-info">
-                    <h3>News Homepage</h3>
-
-                    <ul class="tags">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                    </ul>
-
-                    <ul class="txt-secondary">
-                        <li>Build a fully responsive layout using grid</li>
-                        <li>View the relevant drop-down menus on desktop and mobile when interacting with the navigation links</li>
-                    </ul>
-
-                    <div>
-                        <a class="call-to-action live" target="_blank" href="https://akunamo.github.io/New-Homepage/">See live</a>
-                        <a class="call-to-action git" target="_blank" href="https://github.com/Akunamo/New-Homepage">Source code</a>
-                    </div>
-                </div>
-                <div class="project-image">
-                    <img src="assets/news-homepage.png" alt="news homepage webpage" width="1000" height="605">
-                </div>
-            </div>
-            <div class="project">
-                <div class="project-info">
-                    <h3>Project Name</h3>
-
-                    <ul class="tags">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                    </ul>
-
-                    <ul class="txt-secondary">
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, quis.</li>
-                    </ul>
-
-                    <div>
-                        <a class="call-to-action live" target="_blank" href="">See live</a>
-                        <a class="call-to-action git" target="_blank" href="">Source code</a>
-                    </div>
-
-                </div>
-                <div class="project-image">
-                    <img src="assets/order summary.png" alt="order summary webpage" width="1000" height="567">
-                </div>
-            </div>
-        <!-- </div> -->
+        </div>
+        <div class="project-image">
+            <img src="{{project.imageSource}}" alt="{{project.imageAlt}}" width="{{project.imageWidth}}"
+                height="{{project.imageHeight}}">
+        </div>
     </div>
 </section>
