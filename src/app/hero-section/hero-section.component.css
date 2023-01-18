@@ -1,9 +1,11 @@
 header {
+  --bg-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='205'%3E%3Cpath fill='#769f00' d='M-3.57 16.926c112.232 56.456 302.664 98.876 464.615 91.043 154.51-7.474 393.686-37.81 634.988 44.133 217.836 61.578 348.648 36.173 348.648 36.173-.767-158.92-3.914-125.12-4.681-188.275H0Z' style='fill:%23000'/%3E%3C/svg%3E");
   position: relative;
-  height: calc(min(100vh, 45rem));
+  height: calc(min(90vh, 45rem));
   display: grid;
   place-items: center;
   text-align: center;
+  --red: red;
 }
 
 header::before {
